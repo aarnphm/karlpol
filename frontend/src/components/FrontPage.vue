@@ -2,6 +2,12 @@
   <div id="FrontPage">
     
     <div class="card">
+        <div v-show="show" class="covid">
+          <h2>CoronaVirus(Covid-19) </h2>
+          <p>Help protect yourself and others.</p>
+          <p>No masks. No ride.</p>
+          <button v-on:click="show = false">I am aware.</button>
+        </div>
 
         <h1> Welcome to Karlpol</h1>
 
@@ -32,13 +38,21 @@ export default {
       username: null,
       password: null,
       feedback: null,
+      show: true,
     }
   },
 
   methods: {
     login(){
-      
-    }
+        //authenticate
+        const auth = true;
+        if (auth){
+          this.$router.push("./homepage")
+        }else{
+          this.feedback = "Incorrect username or password."
+        }
+
+    },
 
   }
 

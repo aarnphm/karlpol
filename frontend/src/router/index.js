@@ -26,6 +26,8 @@ const router = new VueRouter({
         path: '/Homepage',
         name: 'Homepage',
         component: HomePage,
+        meta: {requiresAuth: true},
+
   
       },
 
@@ -36,6 +38,20 @@ const router = new VueRouter({
   
       }
     ]
+  })
+
+router.beforeEach( (to, from, next) => {
+    if (to.meta.requiresAuth){
+      //check authurization
+      const auth = false
+      if(auth){
+        next({name:"FrontPage"})
+      }else{
+        next()
+      }
+    }else{
+      next();
+    }
   })
 
 export default router
