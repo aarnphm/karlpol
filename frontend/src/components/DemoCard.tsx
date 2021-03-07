@@ -28,20 +28,20 @@ const useStyles = makeStyles({
 
 export default function DemoCard() {
     const classes = useStyles();
-    const eventId = 'NI4yopwnFbu3sbZNbRTa';
+    const eventId = 'X3iV0xTfHAakuFuG0RJF';
 
     return (
         <Container>
             <Card className={classes.root}>
                 <CardContent>
                     <Typography variant="h5" component="h2">
-                        Want to try out a demo?
+                        Wanna try a demo?
                         <br />
                         <br />
                         <Button
                             size="small"
                             onClick={() => {
-                                window.localStorage.setItem('location', '/event/NI4yopwnFbu3sbZNbRTa/dashboard');
+                                window.localStorage.setItem('location', '/event/X3iV0xTfHAakuFuG0RJF/dashboard');
                                 firebase.auth().signInWithEmailAndPassword('test@test.test', '111111');
                             }}
                         >

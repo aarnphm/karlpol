@@ -43,11 +43,8 @@ const Event = (props: any) => {
                 <Typography variant="h5" component="h2">
                     {props.name}
                 </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    {props.destination}
-                </Typography>
                 <Typography variant="body2" component="p">
-                    This is Trip Information, or similar
+                    Trip Information, or similar will go here
                 </Typography>
             </CardContent>
             <CardActions className={classes.actions}>
@@ -57,7 +54,7 @@ const Event = (props: any) => {
                         history.push(`/event/${props.id}/dashboard`);
                     }}
                 >
-                    Head to event page
+                    Head to the meetup
                 </Button>
             </CardActions>
         </Card>

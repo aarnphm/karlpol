@@ -151,11 +151,11 @@ export default function ListView(props: any) {
             <br />
             <Button variant="contained" color="primary" component={Link} to={`/event/${eventId}/form`}>
                 {' '}
-                I am not at the event{' '}
+                I am not at the meeting points{' '}
             </Button>
             <br />
             <br />
-            <LinkDisplay link={`https://grouber.online/event/${eventId}/form`} />
+            <LinkDisplay link={`https://karlpol.online/event/${eventId}/form`} />
             <Dialog onClose={() => setShowResult(false)} aria-labelledby="customized-dialog-title" open={showResult}>
                 <DialogTitle id="customized-dialog-title">Assignments</DialogTitle>
                 <DialogContent dividers>
