@@ -5,7 +5,7 @@
     "lib": [
       "dom",
       "es6",
-      "es2017",
+      "es2018",
       "esnext.asynciterable"
     ],
     "sourceMap": true,
@@ -24,11 +24,12 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "baseUrl": "."
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
+  ],
+  "include":[
+      "src"
   ]
 }
