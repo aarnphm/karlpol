@@ -3,7 +3,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert, { Color } from '@material-ui/lab/Alert';
 
 //eslint-disable-next-line
-const globalAny: any = global
+const globalAny: any = global;
 
 const Notification = (): ReactElement => {
     const [open, setOpen] = useState(false);

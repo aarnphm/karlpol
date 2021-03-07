@@ -8,7 +8,7 @@ import * as firebase from 'firebase';
 import 'firebase/auth';
 
 //eslint-disable-next-line
-const globalAny: any = global
+const globalAny: any = global;
 
 const useStyles = makeStyles((theme) => ({
     paper: {

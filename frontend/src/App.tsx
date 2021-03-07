@@ -1,13 +1,13 @@
-import React, {useState, ReactElement} from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import React, { useState, ReactElement } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import theme from './styles/theme';
-import Index from './pages/Home';
+import Index from './pages/home';
 import Dashboard from './pages/dashboard';
 import Form from './pages/form';
-import Notification from './components/Notification';
 import NotFound from './pages/404';
 import Login from './pages/login';
+import Notification from './components/Notification';
 import * as firebase from 'firebase';
 import 'firebase/auth';
 

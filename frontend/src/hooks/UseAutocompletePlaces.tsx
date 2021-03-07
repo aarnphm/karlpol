@@ -46,9 +46,9 @@ export default function useAutocompletePlaces(locationType: string) {
 
     const fetch = React.useMemo(
         () =>
-        throttle((request: { input: string }, callback: (results?: PlaceType[]) => void) => {
-            (autocompleteService.current as any).getPlacePredictions(request, callback);
-        }, 200),
+            throttle((request: { input: string }, callback: (results?: PlaceType[]) => void) => {
+                (autocompleteService.current as any).getPlacePredictions(request, callback);
+            }, 200),
         [],
     );
 
@@ -90,58 +90,58 @@ export default function useAutocompletePlaces(locationType: string) {
 
     const render = (
         <Autocomplete
-        id="google-map-demo"
-        getOptionLabel={(option) => (typeof option === 'string' ? option : option.description)}
-        filterOptions={(x) => x}
-        options={options}
-        autoComplete
-        includeInputInList
-        filterSelectedOptions
-        value={value}
-        onChange={async (event: any, newValue: any) => {
-            setOptions(newValue ? [newValue, ...options] : options);
-            setValue(newValue);
-            const address = typeof newValue === 'string' ? newValue : (newValue as PlaceType)?.description;
+            id="google-map-demo"
+            getOptionLabel={(option) => (typeof option === 'string' ? option : option.description)}
+            filterOptions={(x) => x}
+            options={options}
+            autoComplete
+            includeInputInList
+            filterSelectedOptions
+            value={value}
+            onChange={async (event: any, newValue: any) => {
+                setOptions(newValue ? [newValue, ...options] : options);
+                setValue(newValue);
+                const address = typeof newValue === 'string' ? newValue : (newValue as PlaceType)?.description;
 
-            const results = await geocodeByAddress(address);
-            const latlng = await getLatLng(results[0]);
-            setLatLng(latlng);
-        }}
-        onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue);
-        }}
-        renderInput={(params) => (
-            <TextField required margin="normal" {...params} label={locationType} variant="outlined" fullWidth />
-        )}
-        renderOption={(option) => {
-            const matches = option.structured_formatting.main_text_matched_substrings;
-            const parts = parse(
-                option.structured_formatting.main_text,
-                matches.map((match: any) => [match.offset, match.offset + match.length]),
-            );
+                const results = await geocodeByAddress(address);
+                const latlng = await getLatLng(results[0]);
+                setLatLng(latlng);
+            }}
+            onInputChange={(event, newInputValue) => {
+                setInputValue(newInputValue);
+            }}
+            renderInput={(params) => (
+                <TextField required margin="normal" {...params} label={locationType} variant="outlined" fullWidth />
+            )}
+            renderOption={(option) => {
+                const matches = option.structured_formatting.main_text_matched_substrings;
+                const parts = parse(
+                    option.structured_formatting.main_text,
+                    matches.map((match: any) => [match.offset, match.offset + match.length]),
+                );
 
-            return (
-                <Grid container alignItems="center">
-                <Grid item>
-                <LocationOnIcon className={classes.icon} />
-                </Grid>
-                <Grid item xs>
-                {parts.map((part: any, index: any) => (
-                    <span key={index} style={{ fontWeight: part.highlight ? 700 : 400 }}>
-                    {part.text}
-                    </span>
-                ))}
-                <Typography variant="body2" color="textSecondary">
-                {option.structured_formatting.secondary_text}
-                </Typography>
-                </Grid>
-                </Grid>
-            );
-        }}
+                return (
+                    <Grid container alignItems="center">
+                        <Grid item>
+                            <LocationOnIcon className={classes.icon} />
+                        </Grid>
+                        <Grid item xs>
+                            {parts.map((part: any, index: any) => (
+                                <span key={index} style={{ fontWeight: part.highlight ? 700 : 400 }}>
+                                    {part.text}
+                                </span>
+                            ))}
+                            <Typography variant="body2" color="textSecondary">
+                                {option.structured_formatting.secondary_text}
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                );
+            }}
         />
     );
 
     const address = typeof inputValue === 'string' ? inputValue : (inputValue as PlaceType).description;
 
     return [address, latLng, render, setLatLng, setInputValue, setValue];
-} 
+}

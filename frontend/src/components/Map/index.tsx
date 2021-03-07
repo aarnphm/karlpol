@@ -9,7 +9,7 @@ import { People } from '../../_types/people';
 import idToLatLngFunc from './id-to-lat-lng';
 import { Event } from '../../_types/event';
 import axios from 'axios';
-import { Client, Status } from '@googlemaps/google-maps-services-js';
+import { Client } from '@googlemaps/google-maps-services-js';
 
 const client = new Client({});
 
@@ -22,9 +22,11 @@ const MapContainer = ({ google, center }: { google: any; center: google.maps.Lat
     });
     const [solution, setSolution] = useState(undefined);
     useEffect(() => {
-        const data = axios.get(`https://us-central1-karlpol-backend.cloudfunctions.net/solve?eventId=${eventId}`).then((res) => {
-            setSolution(res.data);
-        });
+        const data = axios
+            .get(`https://us-central1-karlpol-backend.cloudfunctions.net/solve?eventId=${eventId}`)
+            .then((res) => {
+                setSolution(res.data);
+            });
     }, [eventData]);
 
     const members = useEventPeople(eventData);
@@ -126,7 +128,7 @@ const MapContainer = ({ google, center }: { google: any; center: google.maps.Lat
     }, [solution]);
 
     const colors: any = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FF00', '#FFFFFF', '#000000'];
-    let i = 0;
+    const idx = 0;
 
     return (
         <Map
@@ -151,8 +153,8 @@ const MapContainer = ({ google, center }: { google: any; center: google.maps.Lat
                 );
             })}
             {newPath?.map((path: any) => {
-                const randomColor = colors[i];
-                i++;
+                const randomColor = colors[idx];
+                // idx++;
                 return <Polyline key="" path={path} strokeColor={randomColor} strokeOpacity={1} strokeWeight={3} />;
             })}
         </Map>

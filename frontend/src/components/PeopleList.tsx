@@ -100,7 +100,7 @@ const Driver = ({ personId, passengerIds }: { personId: string; passengerIds: st
                 </ListItemAvatar>
                 <ListItemText primary={`🚗 ${person?.name}`} secondary={`Driver (${passengerIds.length} passengers)`} />
             </ListItem>
-           <Divider variant="inset" component="li" />
+            <Divider variant="inset" component="li" />
             <List>
                 {passengerIds?.map((passengerId) => (
                     <Passenger key={passengerId} personId={passengerId} />
@@ -169,4 +169,4 @@ export default function ListView(props: any) {
             </Dialog>
         </div>
     );
-} 
+}

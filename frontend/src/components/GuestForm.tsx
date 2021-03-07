@@ -12,7 +12,7 @@ import * as firebase from 'firebase';
 import { useParams } from 'react-router-dom';
 import useAutoCompletePlaces from '../hooks/UseAutocompletePlaces';
 import { Collapse, CircularProgress } from '@material-ui/core';
-import { useDocument, useCollectionData } from 'react-firebase-hooks/firestore';
+import { useDocument } from 'react-firebase-hooks/firestore';
 import { Event } from '../_types/event';
 import 'firebase/auth';
 import { People } from '../_types/people';
@@ -105,7 +105,7 @@ function GuestForm() {
             });
         } else {
             const result = await db.collection('people').add({
-                name: currentUser.displayNme,
+                name: currentUser.displayName,
                 email: currentUser.email,
                 profilePicture: currentUser.photoURL,
                 userId: currentUser.uid,
@@ -211,4 +211,4 @@ interface PlaceType {
     };
 }
 
-export default GuestForm;a
+export default GuestForm;

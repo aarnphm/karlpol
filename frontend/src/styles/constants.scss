@@ -1,24 +1,24 @@
 // Colors
 // white, black
-$white: #FFFFFF;
-$off-white: #DEDEDE;
+$white: #ffffff;
+$off-white: #dedede;
 $dark-gray: #202020;
 $black: #000000;
 
-$blue: #276EF1;
-$green: #05A357;
-$yellow: #FFC043;
-$red: #E11900;
-$brown: #99644C;
-$orange: #FF6937;
-$purple: #7356BF;
+$blue: #276ef1;
+$green: #05a357;
+$yellow: #ffc043;
+$red: #e11900;
+$brown: #99644c;
+$orange: #ff6937;
+$purple: #7356bf;
 
 // Fonts
 $primary-font: 'Poppins', sans-serif;
 $secondary-font: 'PT Serif', serif;
 
 // Add SCSS variables to body
-$prefix: "--";
+$prefix: '--';
 
 @function custom-property-name($name) {
     @return $prefix + $name;
@@ -42,5 +42,4 @@ body {
     @include define-custom-property('purple', $purple);
     @include define-custom-property('primary-font', $primary-font);
     @include define-custom-property('secondary-font', $secondary-font);
-       
 }
