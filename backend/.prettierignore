@@ -1,4 +1,5 @@
 build
+dist
 coverage
 tsconfig.json
 tslint.json
