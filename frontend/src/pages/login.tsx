@@ -13,7 +13,7 @@ const index = (): ReactElement => {
                         <header className={styles.app}>
                             <img src={'/logo.png'} className={styles.logo} alt="logo" />
                             <p>
-                                <code>Create carpools, without the headache.</code>
+                                <code> Create carpools with no hassle.</code>
                             </p>
                         </header>
                     </div>

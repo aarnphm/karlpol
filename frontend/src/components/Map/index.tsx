@@ -164,5 +164,5 @@ const MapContainer = ({ google, center }: { google: any; center: google.maps.Lat
 export default GoogleApiWrapper((props) => ({
     ...props,
     libraries: ['geometry'],
-    apiKey: 'AIzaSyDeYxMI4VWDieaPheczUE8NQkc-HrLqiq',
+    apiKey: 'AIzaSyDeYxMI4VWDieaPheczUE8NQkc-HrLqiqI',
 }))(MapContainer);

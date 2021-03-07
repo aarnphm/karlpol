@@ -52,11 +52,11 @@ function EventForm() {
             <CssBaseline />
             <div className={classes.paper}>
                 <Typography component="h3" variant="h6">
-                    You are making this event as: {currentUser?.displayName} ({currentUser?.email})
+                    You are registered as: {currentUser?.displayName} ({currentUser?.email})
                 </Typography>
                 <br />
                 <Typography component="h1" variant="h5">
-                    Enter Event Details!
+                    Enter Your Details Below
                 </Typography>
                 <form
                     className={classes.form}
@@ -98,8 +98,8 @@ function EventForm() {
                         required
                         fullWidth
                         id="event-name"
-                        label="Event Name"
-                        name="Event Name"
+                        label="Trip Name"
+                        name="Trip Name (Hamilton-New York)"
                         autoFocus
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -109,7 +109,7 @@ function EventForm() {
                             margin="normal"
                             fullWidth
                             ampm={false}
-                            label="Event Date"
+                            label="Trip Date"
                             value={selectedDate}
                             onChange={handleDateChange}
                             onError={console.error}
@@ -119,7 +119,7 @@ function EventForm() {
                     </MuiPickersUtilsProvider>
                     {AutoCompletePlaces}
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
-                        Create New Event
+                        Submit Details
                     </Button>
                 </form>
             </div>

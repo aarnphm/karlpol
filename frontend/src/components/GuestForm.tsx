@@ -132,19 +132,19 @@ function GuestForm() {
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
                     <div className={classes.paper}>
-                        <Typography component="h1" variant="h5">
+                        {/* <Typography component="h1" variant="h5">
                             {host?.name} is inviting you to attend {eventData?.name}.
                         </Typography>
-                        <br />
+                        <br /> */}
                         <Typography component="h1" variant="h5">
-                            This event is at {eventData?.destination?.address}.
+                            Trip destination is at {eventData?.destination?.address}.
                             <br />
                             <br />
                             It is happening on {new Date((eventData?.date as any)?.seconds * 1000).toString()}.
                         </Typography>
                         <br />
                         <Typography component="h3" variant="h6">
-                            You are RSVPing as: {currentUser?.displayName} ({currentUser?.email})
+                            You are going as: {currentUser?.displayName} ({currentUser?.email})
                         </Typography>
                         <br />
                         <form className={classes.form} onSubmit={handleSubmit}>

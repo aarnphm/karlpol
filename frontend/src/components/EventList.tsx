@@ -47,7 +47,7 @@ const Event = (props: any) => {
                     {props.destination}
                 </Typography>
                 <Typography variant="body2" component="p">
-                    This is an event description, some helper text, or something similar.
+                    This is Trip Information, or similar
                 </Typography>
             </CardContent>
             <CardActions className={classes.actions}>

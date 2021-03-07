@@ -117,7 +117,7 @@ export default function ListView(props: any) {
     const members: People[] = props.members;
     const [showResult, setShowResult] = useState(false);
 
-    const result = useFetch(`https://us-central1-find-my-carpool.cloudfunctions.net/solve?eventId=${eventId}`);
+    const result = useFetch(`https://us-central1-karlpol-backend.cloudfunctions.net/solve?eventId=${eventId}`);
 
     return (
         <div style={{ textAlign: 'center' }}>

@@ -1,26 +1,17 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "lib": ["dom", "es6", "es2018", "esnext.asynciterable"],
-        "sourceMap": true,
-        "outDir": "lib",
-        "moduleResolution": "node",
-        "removeComments": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
-    },
-    "exclude": ["node_modules"],
-    "include": ["src"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018",
+    "esModuleInterop": true
+
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
 }
