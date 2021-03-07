@@ -1,4 +1,3 @@
-import { ObjectType, Field } from 'type-graphql'
 import {
   Entity,
   Column,
@@ -9,19 +8,15 @@ import {
 } from 'typeorm'
 import { User } from './User'
 
-@ObjectType()
 @Entity()
 export class Carpool extends BaseEntity {
-  @Field()
   @PrimaryGeneratedColumn()
   id!: number
 
-  @Field()
-  @OneToOne(() => User)
+  @OneToOne(() => User, (user) => user.id)
   @JoinColumn()
   user: User
 
-  @Field()
   @Column()
   capacity!: number
 }

@@ -1,4 +1,4 @@
-import { ObjectType, Field } from 'type-graphql'
+import { ObjectType, Field, Int } from 'type-graphql'
 import {
   Entity,
   OneToMany,
@@ -17,19 +17,19 @@ import { Wallet } from './Wallet'
 @ObjectType()
 @Entity()
 export class User extends BaseEntity {
-  @Field()
+  @Field(() => Int)
   @PrimaryGeneratedColumn()
   id!: number
 
-  @Field()
+  @Field(() => String)
   @Column({ unique: true })
   username!: string
 
-  @Field()
+  @Field(() => String)
   @Column({ unique: true })
   email!: string
 
-  @Column()
+  @Column({ type: "text" })
   password!: string
 
   @OneToMany(() => Itinerary, (itinerary) => itinerary.id)
