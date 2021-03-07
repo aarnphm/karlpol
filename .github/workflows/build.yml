@@ -22,6 +22,7 @@ jobs:
         with:
           args: deploy --only hosting
         env:
+          PROJECT_PATH: ./frontend
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Install Dependencies for Firebase Functions
         run: npm install
@@ -31,4 +32,5 @@ jobs:
         with:
           args: deploy --only functions
         env:
+          PROJECT_PATH: ./frontend/functions
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

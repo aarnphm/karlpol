@@ -40,7 +40,6 @@ function EventForm() {
     const history = useHistory();
     const db = firebase.firestore();
 
-    const [eventName, setName] = useState('');
     const [selectedDate, handleDateChange] = useState<DateTime>(null);
 
     const [address, latlng, AutoCompletePlaces] = useAutoCompletePlaces('Add the Destination Address');
@@ -56,7 +55,7 @@ function EventForm() {
                 </Typography>
                 <br />
                 <Typography component="h1" variant="h5">
-                    Enter Your Details Below
+                    Enter Trip Information Below
                 </Typography>
                 <form
                     className={classes.form}
@@ -77,7 +76,7 @@ function EventForm() {
                         });
                         console.log(selectedDate);
                         const eventRef = await db.collection('events').add({
-                            name: eventName,
+                            name: address,
                             host: (await result.get()).ref,
                             people: [],
                             date: firebase.firestore.Timestamp.fromDate(selectedDate?.toJSDate()),
@@ -92,17 +91,6 @@ function EventForm() {
                         history.push(`/event/${eventRef.id}/dashboard`);
                     }}
                 >
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="event-name"
-                        label="Trip Name"
-                        name="Trip Name (Hamilton-New York)"
-                        autoFocus
-                        onChange={(e) => setName(e.target.value)}
-                    />
                     <MuiPickersUtilsProvider utils={LuxonUtils}>
                         <KeyboardDateTimePicker
                             inputVariant="outlined"
