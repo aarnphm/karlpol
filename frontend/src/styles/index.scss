@@ -1,0 +1,17 @@
+@import './constants.scss';
+
+body {
+    margin: 0;
+    font-family: $primary-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+footer {
+    margin-top: calc(5% + 60px);
+    bottom: 0;
+}
