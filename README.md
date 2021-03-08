@@ -1,8 +1,12 @@
 <h2 align="center">karlpol</h2>
 <p align="center"><i>minimal privacy-focused carpool planner</i></p>
 
+[![Devpost | karlpol](https://badges.devpost-shields.com/get-badge?name=karlpol&id=karlpol&type=basic&style=flat-square)](https://devpost.com/software/karlpol)
+
+
 ## Updates
 <h3 align="center">Maps API has been expired. I will work further to improve security and features. Stay tuned</h3>
+
 ## Inspiration
 The high quality of life in Greater Toronto and Hamilton Area, as well as the competitiveness of the region's industrial base have brought congestion along with its economic growth. Indeed it wouldn't be economic sensible to have a transportation infrastructure operating at zero congestion 24/7. Yet, there are certain level of congestion where its attendant costs (stuck in traffic, diminished productivity,  etc) would surpass the benefits and threat the region's viability as a decent living spaces. According to Metrolinx, there are currently more than two million automobile trips are made during the peak travel period each morning in GTHA, which is shown to have cost us $2.7 billions in economic growth annually. Additionally, traffic congestion increases vehicle emissions and degrades ambient air quality, and recent studies shows excess morbidity and mortality for drivers, commuters living near major roadways. So I want to develop a system that can both allows people to join/hop on a ride that can also acts as a planner.
 
@@ -24,3 +28,8 @@ Learn about React and building UX/UI interfaces. I also learned a lot about geoc
 
 ## What's next for karlpol
 I had done half of the idea, which is that karlpol is a planner system for carpooling, I want to extend where random people when login into the system they can also choose carpool schedule that are nearby and they can just request the owners to hop on. I also want karlpol to be centered around privacy, where people can just get on the system without signup and join in a nearby carpool options for transports.
+
+## Gallery
+<img src="./images/dashboard-min.png">
+<img src="./images/invitationfromhost.png">
+<img src="./images/mainpage.png">
