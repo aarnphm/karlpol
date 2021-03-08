@@ -1,6 +1,8 @@
 <h2 align="center">karlpol</h2>
 <p align="center"><i>minimal privacy-focused carpool planner</i></p>
 
+## Updates
+<h3 align="center">Maps API has been expired. I will work further to improve security and features. Stay tuned</h3>
 ## Inspiration
 The high quality of life in Greater Toronto and Hamilton Area, as well as the competitiveness of the region's industrial base have brought congestion along with its economic growth. Indeed it wouldn't be economic sensible to have a transportation infrastructure operating at zero congestion 24/7. Yet, there are certain level of congestion where its attendant costs (stuck in traffic, diminished productivity,  etc) would surpass the benefits and threat the region's viability as a decent living spaces. According to Metrolinx, there are currently more than two million automobile trips are made during the peak travel period each morning in GTHA, which is shown to have cost us $2.7 billions in economic growth annually. Additionally, traffic congestion increases vehicle emissions and degrades ambient air quality, and recent studies shows excess morbidity and mortality for drivers, commuters living near major roadways. So I want to develop a system that can both allows people to join/hop on a ride that can also acts as a planner.
 
