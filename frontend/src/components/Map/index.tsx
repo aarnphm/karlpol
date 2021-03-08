@@ -103,8 +103,6 @@ const MapContainer = ({ google, center }: { google: any; center: google.maps.Lat
                         );
                         console.log(response);
                     }
-
-                    // newPath.push('_h~jHpbtnVBgg@?eb@BiW@{G@uH@_E?_F}EB{NDuD?aF@sB?gCGeE?sQ?yID{DAmCBeAJYJ[RaAp@]HqEFuF?oBIsE?uCA?k@@{EiCAKEGQAY?}E')
                     console.log(response.data.routes[0].overview_polyline.points);
                     if (response.data.routes[0]) {
                         return google.maps.geometry.encoding.decodePath(
